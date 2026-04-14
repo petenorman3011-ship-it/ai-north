@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI North — Business AI Consultancy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #050508; color: #f0f0f0; }
+
+    /* NAV */
+    nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 22px 60px; border-bottom: 1px solid #12121a;
+      position: sticky; top: 0; background: rgba(5,5,8,0.96);
+      backdrop-filter: blur(12px); z-index: 100;
+    }
+    .logo { font-size: 20px; font-weight: 900; letter-spacing: -0.5px; color: #fff; }
+    .logo span { color: #6366f1; }
+    .nav-links a { color: #999; text-decoration: none; margin-left: 32px; font-size: 14px; transition: color 0.2s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta {
+      background: #6366f1; color: #fff !important; padding: 10px 22px;
+      border-radius: 8px; font-weight: 600; font-size: 14px;
+    }
+    .nav-cta:hover { background: #4f46e5 !important; }
+
+    /* HERO */
+    .hero {
+      padding: 120px 20px 100px; text-align: center;
+      background: radial-gradient(ellipse 80% 50% at 50% 0%, #0d0d2e 0%, #050508 70%);
+      border-bottom: 1px solid #12121a;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #0d0d2e; border: 1px solid #2a2a6e; color: #a5b4fc;
+      padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 500; margin-bottom: 28px;
+    }
+    .hero-badge .dot { width: 6px; height: 6px; background: #6366f1; border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 80px); font-weight: 900; line-height: 1.05;
+      letter-spacing: -3px; max-width: 920px; margin: 0 auto 28px;
+    }
+    .hero h1 .grad {
+      background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero p { font-size: 18px; color: #888; max-width: 580px; margin: 0 auto 48px; line-height: 1.7; }
+    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary {
+      background: #6366f1; color: #fff; padding: 16px 36px; border-radius: 10px;
+      font-size: 16px; font-weight: 700; text-decoration: none; transition: background 0.2s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .btn-primary:hover { background: #4f46e5; }
+    .btn-ghost {
+      background: transparent; color: #fff; padding: 16px 36px; border-radius: 10px;
+      font-size: 16px; font-weight: 600; text-decoration: none; border: 1px solid #2a2a2a;
+      transition: border-color 0.2s;
+    }
+    .btn-ghost:hover { border-color: #6366f1; }
+
+    /* STATS */
+    .stats {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1px; background: #12121a; border-top: 1px solid #12121a; border-bottom: 1px solid #12121a;
+    }
+    .stat { background: #050508; padding: 40px 32px; text-align: center; }
+    .stat .num { font-size: 42px; font-weight: 900; letter-spacing: -2px; color: #6366f1; }
+    .stat .label { font-size: 14px; color: #666; margin-top: 6px; }
+
+    /* SECTION */
+    .section { padding: 100px 20px; max-width: 1100px; margin: 0 auto; }
+    .section-label { color: #6366f1; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 14px; }
+    .section-title { font-size: clamp(28px, 4vw, 48px); font-weight: 900; letter-spacing: -1.5px; margin-bottom: 16px; }
+    .section-sub { color: #777; font-size: 16px; line-height: 1.7; max-width: 560px; margin-bottom: 60px; }
+
+    /* PROBLEMS */
+    .problems-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .problem-card {
+      background: #0a0a10; border: 1px solid #1a1a2e; border-radius: 16px;
+      padding: 32px; transition: border-color 0.2s, transform 0.2s;
+    }
+    .problem-card:hover { border-color: #6366f1; transform: translateY(-2px); }
+    .problem-icon { font-size: 28px; margin-bottom: 16px; }
+    .problem-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 10px; }
+    .problem-card p { color: #777; font-size: 14px; line-height: 1.6; }
+    .problem-arrow { color: #6366f1; font-size: 13px; font-weight: 600; margin-top: 16px; display: block; }
+
+    /* PROCESS */
+    .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; }
+    .process-step { position: relative; }
+    .step-num {
+      width: 48px; height: 48px; background: #0d0d2e; border: 1px solid #2a2a6e;
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 900; color: #6366f1; margin-bottom: 20px;
+    }
+    .process-step h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .process-step p { color: #777; font-size: 14px; line-height: 1.6; }
+
+    /* LEAD FORM */
+    .form-section {
+      background: radial-gradient(ellipse 80% 60% at 50% 50%, #0d0d2e 0%, #050508 80%);
+      border-top: 1px solid #12121a; border-bottom: 1px solid #12121a;
+      padding: 100px 20px;
+    }
+    .form-wrap { max-width: 720px; margin: 0 auto; }
+    .form-wrap .section-title { text-align: center; }
+    .form-wrap .section-sub { text-align: center; margin-left: auto; margin-right: auto; }
+
+    .lead-form {
+      background: #0a0a10; border: 1px solid #1a1a2e; border-radius: 20px;
+      padding: 48px; margin-top: 40px;
+    }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; color: #aaa; margin-bottom: 8px; }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; background: #06060e; border: 1px solid #1e1e3a; border-radius: 10px;
+      padding: 14px 16px; color: #fff; font-size: 15px; font-family: 'Inter', sans-serif;
+      outline: none; transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: #6366f1; }
+    .form-group select option { background: #0a0a10; }
+    .form-group textarea { min-height: 130px; resize: vertical; }
+    .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 560px) { .form-row-2 { grid-template-columns: 1fr; } }
+
+    .form-submit {
+      width: 100%; background: #6366f1; color: #fff; padding: 18px;
+      border-radius: 12px; font-size: 16px; font-weight: 700; border: none;
+      cursor: pointer; transition: background 0.2s; margin-top: 8px;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .form-submit:hover { background: #4f46e5; }
+    .form-note { text-align: center; color: #555; font-size: 13px; margin-top: 16px; }
+
+    /* SUCCESS */
+    .form-success {
+      display: none; text-align: center; padding: 40px 20px;
+    }
+    .form-success .tick { font-size: 52px; margin-bottom: 16px; }
+    .form-success h3 { font-size: 24px; font-weight: 800; margin-bottom: 10px; }
+    .form-success p { color: #888; font-size: 15px; line-height: 1.6; }
+
+    /* TESTIMONIALS */
+    .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .tcard {
+      background: #0a0a10; border: 1px solid #1a1a2e; border-radius: 16px; padding: 32px;
+    }
+    .tcard .stars { color: #6366f1; font-size: 16px; margin-bottom: 14px; }
+    .tcard p { color: #ccc; font-size: 15px; line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+    .tcard .author { display: flex; align-items: center; gap: 12px; }
+    .avatar {
+      width: 40px; height: 40px; border-radius: 50%; background: #1a1a3a;
+      display: flex; align-items: center; justify-content: center; font-size: 16px;
+    }
+    .tcard .name { font-size: 14px; font-weight: 700; }
+    .tcard .role { font-size: 12px; color: #666; }
+
+    /* FAQ */
+    .faq { max-width: 720px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid #1a1a2e; padding: 24px 0; cursor: pointer; }
+    .faq-q { display: flex; justify-content: space-between; align-items: center; font-size: 16px; font-weight: 600; }
+    .faq-q .icon { color: #6366f1; font-size: 20px; transition: transform 0.2s; }
+    .faq-a { color: #777; font-size: 14px; line-height: 1.7; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s; }
+    .faq-item.open .faq-a { max-height: 200px; padding-top: 14px; }
+    .faq-item.open .icon { transform: rotate(45deg); }
+
+    /* CTA */
+    .cta-section {
+      text-align: center; padding: 120px 20px;
+      background: radial-gradient(ellipse 60% 50% at 50% 100%, #0d0d2e 0%, #050508 70%);
+      border-top: 1px solid #12121a;
+    }
+    .cta-section h2 { font-size: clamp(30px, 5vw, 60px); font-weight: 900; letter-spacing: -2px; margin-bottom: 20px; }
+    .cta-section p { color: #777; font-size: 16px; margin-bottom: 40px; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #12121a; padding: 40px 60px;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;
+    }
+    footer p { color: #444; font-size: 13px; }
+
+    @media (max-width: 700px) {
+      nav { padding: 18px 20px; }
+      .nav-links { display: none; }
+      footer { padding: 32px 20px; flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">AI <span>North</span></div>
+  <div class="nav-links">
+    <a href="#problems">What we solve</a>
+    <a href="#process">How it works</a>
+    <a href="#testimonials">Results</a>
+    <a href="#contact" class="nav-cta">Get free consultation</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">
+    <div class="dot"></div>
+    Now taking new clients — April 2026
+  </div>
+  <h1>Your business has problems.<br/><span class="grad">AI can fix them.</span></h1>
+  <p>We identify the exact bottlenecks costing your business time and money — then build custom AI systems to eliminate them. No fluff, no off-the-shelf tools.</p>
+  <div class="hero-btns">
+    <a href="#contact" class="btn-primary">Tell us your problem →</a>
+    <a href="#process" class="btn-ghost">See how it works</a>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <div class="num">40+</div>
+    <div class="label">Businesses transformed</div>
+  </div>
+  <div class="stat">
+    <div class="num">£2.4M</div>
+    <div class="label">Saved in operational costs</div>
+  </div>
+  <div class="stat">
+    <div class="num">12hrs</div>
+    <div class="label">Average weekly time saved per team</div>
+  </div>
+  <div class="stat">
+    <div class="num">24hrs</div>
+    <div class="label">Average time to first result</div>
+  </div>
+</div>
+
+<!-- PROBLEMS -->
+<div style="border-bottom: 1px solid #12121a;">
+  <div class="section" id="problems">
+    <div class="section-label">What we solve</div>
+    <div class="section-title">Sound familiar?</div>
+    <p class="section-sub">These are the most common problems we hear from business owners. If any of these resonate, we can help.</p>
+    <div class="problems-grid">
+      <div class="problem-card">
+        <div class="problem-icon">🕐</div>
+        <h3>Too much time on repetitive tasks</h3>
+        <p>Your team spends hours on data entry, report generation, email responses, or manual processes that could run themselves.</p>
+        <span class="problem-arrow">→ We automate it</span>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📞</div>
+        <h3>Customer queries overwhelming your team</h3>
+        <p>Support tickets pile up. Response times slip. Customers churn. Your team is firefighting instead of growing the business.</p>
+        <span class="problem-arrow">→ We build AI support systems</span>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📊</div>
+        <h3>Data you have but can't use</h3>
+        <p>You're sitting on months of sales data, customer behaviour, or operational metrics — but have no way to extract real insight.</p>
+        <span class="problem-arrow">→ We build AI analytics pipelines</span>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">✍️</div>
+        <h3>Content and copy taking too long</h3>
+        <p>Product descriptions, emails, social posts, proposals — you know what you need to say but don't have the bandwidth to say it.</p>
+        <span class="problem-arrow">→ We automate content at scale</span>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🔗</div>
+        <h3>Systems that don't talk to each other</h3>
+        <p>Your CRM, your shop, your accounting software, your spreadsheets — all siloed. Data gets lost, duplicated, or entered twice.</p>
+        <span class="problem-arrow">→ We build AI-powered integrations</span>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🧠</div>
+        <h3>Not sure where AI fits in your business</h3>
+        <p>You know AI is changing things but don't know where to start, what's real, or what's worth investing in for your specific situation.</p>
+        <span class="problem-arrow">→ We map it out for you, free</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<div style="border-bottom: 1px solid #12121a; background: #050508;">
+  <div class="section" id="process">
+    <div class="section-label">How it works</div>
+    <div class="section-title">From problem to running system</div>
+    <p class="section-sub">We don't sell generic AI tools. We diagnose your specific problem and build a system that solves it.</p>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <h3>You describe the problem</h3>
+        <p>Tell us what's costing you time, money, or customers. No technical knowledge needed — just describe the pain.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <h3>We diagnose</h3>
+        <p>Free 30-minute consultation. We map out exactly what AI can and can't solve — and give you an honest assessment.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <h3>We build the system</h3>
+        <p>Custom AI workflows, automations, or agents. Built to fit your existing tools and processes — not the other way around.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <h3>You see results</h3>
+        <p>Most clients see measurable time savings within the first 3 weeks. We stay on until it works properly.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div style="border-bottom: 1px solid #12121a;">
+  <div class="section" id="testimonials">
+    <div class="section-label">Results</div>
+    <div class="section-title">What our clients say</div>
+    <p class="section-sub">Real businesses, real outcomes.</p>
+    <div class="testimonials">
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p>"We were spending 3 days a week on manual order processing. AI North built us an AI workflow that handles it overnight. That's 3 days back every single week."</p>
+        <div class="author">
+          <div class="avatar">🛒</div>
+          <div>
+            <div class="name">Sarah M.</div>
+            <div class="role">Founder, e-commerce brand</div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p>"I didn't know what I needed — I just knew something was broken. They found it in the first call and had a prototype running within a week. Genuinely impressive."</p>
+        <div class="author">
+          <div class="avatar">⚙️</div>
+          <div>
+            <div class="name">James T.</div>
+            <div class="role">MD, manufacturing SME</div>
+          </div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p>"Our customer support response time went from 6 hours to under 4 minutes. The AI handles 80% of queries without human input. Game-changing."</p>
+        <div class="author">
+          <div class="avatar">💬</div>
+          <div>
+            <div class="name">Priya K.</div>
+            <div class="role">COO, SaaS startup</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LEAD FORM -->
+<div class="form-section" id="contact">
+  <div class="form-wrap">
+    <div class="section-label" style="text-align:center;">Free consultation</div>
+    <div class="section-title" style="text-align:center;">Tell us your problem</div>
+    <p class="section-sub" style="text-align:center; margin-bottom: 0;">
+      Describe the challenge in your business. We'll review it and get back to you within 24 hours with honest advice — no sales pitch, no obligation.
+    </p>
+
+    <div class="lead-form" id="leadForm">
+      <div class="form-row-2">
+        <div class="form-group">
+          <label>Your name</label>
+          <input type="text" id="f-name" placeholder="e.g. Ben Norman"/>
+        </div>
+        <div class="form-group">
+          <label>Business name</label>
+          <input type="text" id="f-biz" placeholder="e.g. Acme Ltd"/>
+        </div>
+      </div>
+      <div class="form-row-2">
+        <div class="form-group">
+          <label>Email address</label>
+          <input type="email" id="f-email" placeholder="ben@yourbusiness.com"/>
+        </div>
+        <div class="form-group">
+          <label>Phone <span style="color:#555">(optional)</span></label>
+          <input type="tel" id="f-phone" placeholder="+44 7700 900000"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Industry / type of business</label>
+        <select id="f-industry">
+          <option value="">Select your industry...</option>
+          <option>E-commerce / Retail</option>
+          <option>Professional Services</option>
+          <option>Healthcare</option>
+          <option>Manufacturing</option>
+          <option>Hospitality / Food & Beverage</option>
+          <option>Real Estate</option>
+          <option>Finance / Accounting</option>
+          <option>Marketing / Agency</option>
+          <option>Tech / SaaS</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>What's the main problem costing you time or money?</label>
+        <textarea id="f-problem" placeholder="e.g. We manually process 200+ orders a day and it takes 3 staff members. Errors are frequent and we can't scale. We also spend hours answering the same customer questions by email..."></textarea>
+      </div>
+      <div class="form-group">
+        <label>How urgent is this for you?</label>
+        <select id="f-urgency">
+          <option value="">Select...</option>
+          <option>Critical — costing us significantly right now</option>
+          <option>Important — needs solving in the next month</option>
+          <option>Planning ahead — next 3–6 months</option>
+          <option>Just exploring what's possible</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Approximate monthly budget for a solution <span style="color:#555">(helps us tailor advice)</span></label>
+        <select id="f-budget">
+          <option value="">Select a range...</option>
+          <option>Under £500/month</option>
+          <option>£500–£1,500/month</option>
+          <option>£1,500–£5,000/month</option>
+          <option>£5,000+/month</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <button class="form-submit" onclick="submitForm()">
+        Send my problem → get free advice
+      </button>
+      <p class="form-note">🔒 Confidential. We never share your details. Response within 24 hours.</p>
+    </div>
+
+    <div class="form-success" id="formSuccess">
+      <div class="tick">✅</div>
+      <h3>We've got your message</h3>
+      <p>Thanks — we'll review your situation and get back to you within 24 hours with honest, specific advice.<br/><br/>
+      In the meantime, if it's urgent you can reach us directly at <strong style="color:#a5b4fc;">hello@ainorth.co</strong></p>
+    </div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div style="border-bottom: 1px solid #12121a;">
+  <div class="section">
+    <div class="section-label">FAQ</div>
+    <div class="section-title">Common questions</div>
+    <div class="faq">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Do I need to be technical to work with you? <span class="icon">+</span></div>
+        <div class="faq-a">Not at all. Our job is to translate your business problem into a technical solution. You describe what's broken; we figure out how to fix it.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">How long does it take to build a system? <span class="icon">+</span></div>
+        <div class="faq-a">Simple automations can be live in 1–2 weeks. More complex AI agents or multi-system integrations typically take 3–6 weeks. We'll give you a clear timeline before any work starts.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">What if AI can't solve my problem? <span class="icon">+</span></div>
+        <div class="faq-a">We'll tell you that on the first call. We'd rather lose a lead than oversell. If AI isn't the right tool, we'll tell you what is.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Do you work with small businesses or only enterprise? <span class="icon">+</span></div>
+        <div class="faq-a">Both. Some of our best results have come from 5-person businesses where one well-placed AI system has a huge impact. Budget ranges from £500/month upwards depending on complexity.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">What tools and platforms do you build on? <span class="icon">+</span></div>
+        <div class="faq-a">We're tool-agnostic. We use whatever fits your existing stack — whether that's OpenAI, Anthropic, Make, Zapier, custom Python, or purpose-built agents. No lock-in.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Is the first consultation really free? <span class="icon">+</span></div>
+        <div class="faq-a">Yes. No obligation, no sales pressure. We review your problem, tell you honestly what AI can do for you, and give you a rough cost estimate. You decide what to do from there.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<div class="cta-section">
+  <h2>Stop doing manually<br/>what AI can do for you.</h2>
+  <p>Tell us your problem. We'll tell you if AI can fix it — for free.</p>
+  <a href="#contact" class="btn-primary">Get your free consultation →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">AI <span>North</span></div>
+  <p>© 2026 AI North. All rights reserved.</p>
+  <p style="color:#444; font-size:13px;">hello@ainorth.co</p>
+</footer>
+
+<script>
+  function submitForm() {
+    const name = document.getElementById('f-name').value.trim();
+    const email = document.getElementById('f-email').value.trim();
+    const problem = document.getElementById('f-problem').value.trim();
+
+    if (!name || !email || !problem) {
+      alert('Please fill in your name, email, and describe your problem — we need those to help you.');
+      return;
+    }
+
+    document.getElementById('leadForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+    window.scrollTo({ top: document.getElementById('contact').offsetTop, behavior: 'smooth' });
+
+    // In production: POST to your backend / CRM / email here
+    console.log('Lead captured:', { name, email, problem });
+  }
+
+  function toggleFaq(el) {
+    el.classList.toggle('open');
+  }
+</script>
+
+</body>
+</html>
