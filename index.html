@@ -83,6 +83,37 @@
     .scroll-indicator span { font-size: 10px; color: #334155; letter-spacing: 3px; text-transform: uppercase; }
     .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, #00d4ff, transparent); }
 
+    /* ── PARTICLES ── */
+    .particle { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: #00d4ff; pointer-events: none; animation: particleFloat linear infinite; }
+    @keyframes particleFloat {
+      0% { transform: translateY(0) scale(0.5); opacity: 0; }
+      20% { opacity: 0.6; }
+      80% { opacity: 0.3; }
+      100% { transform: translateY(-80px) scale(1); opacity: 0; }
+    }
+
+    /* ── TERMINAL ── */
+    .terminal-section { padding: 80px 48px; position: relative; }
+    .terminal-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(0,212,255,0.2), transparent); }
+    .terminal-wrap { max-width: 760px; margin: 0 auto; }
+    .terminal {
+      background: rgba(0,0,0,0.75); border: 1px solid rgba(0,212,255,0.2);
+      border-radius: 12px; overflow: hidden;
+      box-shadow: 0 0 40px rgba(0,212,255,0.05), 0 25px 50px rgba(0,0,0,0.5);
+    }
+    .terminal-bar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: rgba(0,0,0,0.4); border-bottom: 1px solid rgba(0,212,255,0.1); }
+    .terminal-dot { width: 12px; height: 12px; border-radius: 50%; }
+    .terminal-label { margin-left: 8px; font-size: 12px; color: #475569; font-family: monospace; }
+    .terminal-body { padding: 24px; font-family: monospace; font-size: 14px; min-height: 320px; line-height: 1.8; }
+    .t-prompt { color: #00d4ff; }
+    .t-input { color: #4ade80; }
+    .t-success { color: #34d399; }
+    .t-highlight { color: #a855f7; }
+    .t-blank { height: 10px; display: block; }
+    .cursor { display: inline-block; width: 8px; height: 16px; background: #00d4ff; animation: blink 1s infinite; vertical-align: middle; margin-left: 2px; }
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+    .terminal-cta { text-align: center; margin-top: 32px; }
+
     /* ── STATS ── */
     .stats-section { padding: 80px 48px; position: relative; }
     .stats-section::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent, rgba(0,212,255,0.03), transparent); pointer-events: none; }
@@ -237,6 +268,7 @@
     <div class="blob blob-2"></div>
     <div class="blob blob-3"></div>
   </div>
+  <div id="particles" style="position:absolute;inset:0;pointer-events:none;z-index:2;"></div>
   <div class="hero-content">
     <div class="hero-badge">
       <div class="hero-badge-dot"></div>
@@ -284,6 +316,27 @@
       <div class="stat-num">24hrs</div>
       <div class="stat-label">To Prototype</div>
       <div class="stat-sub">Concept to working demo</div>
+    </div>
+  </div>
+</section>
+
+<!-- TERMINAL -->
+<section class="terminal-section grid-bg" id="demo">
+  <div class="section-label">Live Demo</div>
+  <div class="section-title">See It In Action</div>
+  <p style="text-align:center;color:#64748b;max-width:480px;margin:0 auto 48px;font-size:15px;">From problem to solution in a conversation. This is how fast AI North works.</p>
+  <div class="terminal-wrap">
+    <div class="terminal">
+      <div class="terminal-bar">
+        <div class="terminal-dot" style="background:#ef4444;"></div>
+        <div class="terminal-dot" style="background:#f59e0b;"></div>
+        <div class="terminal-dot" style="background:#22c55e;"></div>
+        <span class="terminal-label">ai-north — terminal</span>
+      </div>
+      <div class="terminal-body" id="terminalBody"></div>
+    </div>
+    <div class="terminal-cta">
+      <a href="#contact" class="btn-neon">⚡ Start Your Own Conversation</a>
     </div>
   </div>
 </section>
@@ -532,6 +585,79 @@ function toggleNav() {
 document.querySelectorAll('.nav-links a').forEach(a => {
   a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
 });
+
+// ── Particles ──
+const particleContainer = document.getElementById('particles');
+const PARTICLE_DATA = Array.from({length: 20}, (_, i) => ({
+  left: `${(i * 13 + 7) % 100}%`,
+  top: `${(i * 17 + 11) % 100}%`,
+  duration: `${3 + (i % 4)}s`,
+  delay: `${(i * 0.3) % 5}s`,
+  opacity: 0.1 + (i % 5) * 0.08
+}));
+PARTICLE_DATA.forEach(p => {
+  const el = document.createElement('div');
+  el.className = 'particle';
+  el.style.cssText = `left:${p.left};top:${p.top};animation-duration:${p.duration};animation-delay:${p.delay};opacity:${p.opacity};`;
+  particleContainer.appendChild(el);
+});
+
+// ── Terminal typing animation ──
+const LINES = [
+  { type: 'prompt', text: '> Describe your problem' },
+  { type: 'input', text: '"Our support team can\'t keep up with tickets"' },
+  { type: 'prompt', text: '> Analyzing...' },
+  { type: 'blank', text: '' },
+  { type: 'success', text: '\u2713 AI Support Agent recommended' },
+  { type: 'success', text: '\u2713 Estimated 73% ticket reduction' },
+  { type: 'success', text: '\u2713 24hr prototype ready' },
+  { type: 'blank', text: '' },
+  { type: 'prompt', text: '> Deploy? [Y/n]' },
+  { type: 'input', text: 'Y' },
+  { type: 'blank', text: '' },
+  { type: 'highlight', text: '\u26a1 Deploying your AI agent...' },
+  { type: 'highlight', text: '\ud83d\ude80 Live in 24 hours. Ready to transform your support?' },
+];
+const typeColors = { prompt: '#00d4ff', input: '#4ade80', success: '#34d399', highlight: '#a855f7', blank: '' };
+const termBody = document.getElementById('terminalBody');
+let lineIdx = 0, charIdx = 0;
+function typeLine() {
+  if (lineIdx >= LINES.length) {
+    const cursor = document.createElement('span');
+    cursor.className = 'cursor';
+    termBody.appendChild(cursor);
+    return;
+  }
+  const line = LINES[lineIdx];
+  if (line.type === 'blank') {
+    const el = document.createElement('span');
+    el.className = 't-blank';
+    termBody.appendChild(el);
+    lineIdx++; charIdx = 0;
+    setTimeout(typeLine, 150);
+    return;
+  }
+  if (charIdx === 0) {
+    const el = document.createElement('div');
+    el.id = 'tline-' + lineIdx;
+    el.style.color = typeColors[line.type] || '#fff';
+    termBody.appendChild(el);
+  }
+  const el = document.getElementById('tline-' + lineIdx);
+  if (charIdx < line.text.length) {
+    el.textContent = line.text.slice(0, charIdx + 1);
+    charIdx++;
+    setTimeout(typeLine, 35);
+  } else {
+    lineIdx++; charIdx = 0;
+    setTimeout(typeLine, 200);
+  }
+}
+// Start when terminal scrolls into view
+const termObserver = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) { typeLine(); termObserver.disconnect(); }
+}, { threshold: 0.3 });
+termObserver.observe(document.getElementById('terminalBody'));
 
 function handleSubmit(e) {
   e.preventDefault();
