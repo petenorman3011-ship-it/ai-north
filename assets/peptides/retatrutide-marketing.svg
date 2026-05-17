@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 1200" width="800" height="1200">
+  <defs>
+    <!-- Background hex pattern -->
+    <pattern id="hexPattern" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
+      <polygon points="30,2 58,17 58,47 30,62 2,47 2,17" fill="none" stroke="#2a3f6e" stroke-width="0.8" opacity="0.3"/>
+    </pattern>
+    <!-- Holographic gradient for seal -->
+    <radialGradient id="holoGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#e0f7fa"/>
+      <stop offset="20%"  stop-color="#b2ebf2"/>
+      <stop offset="40%"  stop-color="#c5e1a5"/>
+      <stop offset="60%"  stop-color="#f8bbd0"/>
+      <stop offset="80%"  stop-color="#d1c4e9"/>
+      <stop offset="100%" stop-color="#ffe0b2"/>
+    </radialGradient>
+    <!-- Card gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2f7"/>
+    </linearGradient>
+    <!-- Top header gradient -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#0d1f3c"/>
+      <stop offset="100%" stop-color="#1b3a6b"/>
+    </linearGradient>
+    <!-- Bottom banner gradient -->
+    <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#0d1f3c"/>
+      <stop offset="100%" stop-color="#1b3a6b"/>
+    </linearGradient>
+    <!-- DNA helix gradient -->
+    <linearGradient id="dnaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#4a9eff"/>
+      <stop offset="100%" stop-color="#1b5fc0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- BACKGROUND                                        -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <rect width="800" height="1200" fill="#111d35"/>
+  <rect width="800" height="1200" fill="url(#hexPattern)"/>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- MAIN CARD                                         -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <rect x="40" y="40" width="720" height="1120" rx="18" ry="18" fill="url(#cardGrad)" opacity="0.97"/>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- TOP HEADER BAND                                   -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <rect x="40" y="40" width="720" height="140" rx="18" ry="18" fill="url(#headerGrad)"/>
+  <rect x="40" y="140" width="720" height="40" fill="url(#headerGrad)"/>
+
+  <!-- DNA Helix Icon -->
+  <!-- Spine left -->
+  <line x1="72" y1="58" x2="72" y2="162" stroke="#4a9eff" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Spine right -->
+  <line x1="96" y1="58" x2="96" y2="162" stroke="#4a9eff" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Rungs -->
+  <line x1="72" y1="68"  x2="96" y2="75"  stroke="#7ec8ff" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="72" y1="82"  x2="96" y2="89"  stroke="#7ec8ff" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="72" y1="96"  x2="96" y2="103" stroke="#7ec8ff" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="72" y1="110" x2="96" y2="117" stroke="#7ec8ff" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="72" y1="124" x2="96" y2="131" stroke="#7ec8ff" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="72" y1="138" x2="96" y2="145" stroke="#7ec8ff" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Node dots -->
+  <circle cx="72" cy="68"  r="3.5" fill="#4a9eff"/>
+  <circle cx="96" cy="75"  r="3.5" fill="#4a9eff"/>
+  <circle cx="72" cy="96"  r="3.5" fill="#4a9eff"/>
+  <circle cx="96" cy="103" r="3.5" fill="#4a9eff"/>
+  <circle cx="72" cy="124" r="3.5" fill="#4a9eff"/>
+  <circle cx="96" cy="131" r="3.5" fill="#4a9eff"/>
+
+  <!-- Brand Name -->
+  <text x="118" y="98" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-weight="bold" fill="#a8c4e0" letter-spacing="4" text-anchor="start">ADVANCED PEPTIDES UK</text>
+  <line x1="118" y1="106" x2="440" y2="106" stroke="#4a9eff" stroke-width="0.8" opacity="0.6"/>
+  <text x="118" y="125" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#7090b0" letter-spacing="2.5" text-anchor="start">ADVANCED PEPTIDE THERAPY</text>
+  <text x="118" y="142" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#7090b0" letter-spacing="2.5" text-anchor="start">ENGINEERED FOR PRECISION</text>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- PRODUCT TITLE AREA                                -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <text x="400" y="240" font-family="Georgia, 'Times New Roman', serif" font-size="62" font-weight="bold" fill="#0d1f3c" letter-spacing="3" text-anchor="middle">RETATRUTIDE</text>
+  <text x="400" y="270" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#4a6fa5" letter-spacing="5" text-anchor="middle">PRE-FILLED INJECTION PEN</text>
+  <line x1="120" y1="285" x2="680" y2="285" stroke="#4a9eff" stroke-width="1" opacity="0.4"/>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- FEATURE BULLETS                                   -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- Bullet 1 -->
+  <circle cx="105" cy="320" r="5" fill="#4a9eff"/>
+  <text x="122" y="325" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#1b2a4a" font-weight="600">Advanced peptide therapy</text>
+  <!-- Bullet 2 -->
+  <circle cx="105" cy="350" r="5" fill="#4a9eff"/>
+  <text x="122" y="355" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#1b2a4a" font-weight="600">Supports healthy weight management*</text>
+  <!-- Bullet 3 -->
+  <circle cx="105" cy="380" r="5" fill="#4a9eff"/>
+  <text x="122" y="385" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#1b2a4a" font-weight="600">Clinically researched compound</text>
+  <!-- Bullet 4 -->
+  <circle cx="105" cy="410" r="5" fill="#4a9eff"/>
+  <text x="122" y="415" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#1b2a4a" font-weight="600">For subcutaneous use</text>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- HOLOGRAPHIC SEAL                                  -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <circle cx="645" cy="365" r="72" fill="url(#holoGrad)" opacity="0.92"/>
+  <circle cx="645" cy="365" r="72" fill="none" stroke="#c0d8e8" stroke-width="2" opacity="0.7"/>
+  <circle cx="645" cy="365" r="62" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.5" stroke-dasharray="4,3"/>
+  <!-- Seal text on arc (approximated with straight text) -->
+  <text x="645" y="340" font-family="Arial, Helvetica, sans-serif" font-size="8.5" fill="#1b2a4a" font-weight="bold" letter-spacing="2.5" text-anchor="middle">RESEARCH QUALITY</text>
+  <text x="645" y="358" font-family="Arial, Helvetica, sans-serif" font-size="8.5" fill="#1b2a4a" font-weight="bold" letter-spacing="2.5" text-anchor="middle">PEPTIDE SOLUTION</text>
+  <!-- Star -->
+  <polygon points="645,368 648,376 657,376 650,381 652,390 645,385 638,390 640,381 633,376 642,376" fill="#1b2a4a" opacity="0.8"/>
+  <!-- Outer ring text -->
+  <text x="645" y="405" font-family="Arial, Helvetica, sans-serif" font-size="7" fill="#2a4070" letter-spacing="1.5" text-anchor="middle" opacity="0.8">✦ ADVANCED PEPTIDES UK ✦</text>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- PRODUCT BOX — FRONT VIEW                         -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <g transform="translate(90, 445)">
+    <!-- Box shadow -->
+    <rect x="7" y="7" width="260" height="320" rx="10" fill="#c0ccd8" opacity="0.5"/>
+    <!-- Box body -->
+    <rect x="0" y="0" width="260" height="320" rx="10" fill="#f0f4f8"/>
+    <rect x="0" y="0" width="260" height="320" rx="10" fill="none" stroke="#1b2a4a" stroke-width="2"/>
+    <!-- Navy top band -->
+    <rect x="0" y="0" width="260" height="80" rx="10" ry="10" fill="#0d1f3c"/>
+    <rect x="0" y="60" width="260" height="20" fill="#0d1f3c"/>
+    <!-- Brand on box -->
+    <text x="130" y="30" font-family="Georgia, serif" font-size="10" fill="#a8c4e0" letter-spacing="3" text-anchor="middle" font-weight="bold">ADVANCED PEPTIDES UK</text>
+    <!-- Small DNA on box -->
+    <line x1="18" y1="15" x2="18" y2="65" stroke="#4a9eff" stroke-width="1.5"/>
+    <line x1="30" y1="15" x2="30" y2="65" stroke="#4a9eff" stroke-width="1.5"/>
+    <line x1="18" y1="22" x2="30" y2="27" stroke="#7ec8ff" stroke-width="1.2"/>
+    <line x1="18" y1="35" x2="30" y2="40" stroke="#7ec8ff" stroke-width="1.2"/>
+    <line x1="18" y1="48" x2="30" y2="53" stroke="#7ec8ff" stroke-width="1.2"/>
+    <line x1="18" y1="61" x2="30" y2="55" stroke="#7ec8ff" stroke-width="1.2"/>
+    <!-- Product name on box -->
+    <text x="130" y="52" font-family="Georgia, serif" font-size="11" fill="#7ec8ff" letter-spacing="2" text-anchor="middle">ENGINEERED FOR PRECISION</text>
+    <!-- Large product name -->
+    <text x="130" y="115" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#0d1f3c" text-anchor="middle">RETATRUTIDE</text>
+    <text x="130" y="137" font-family="Arial, sans-serif" font-size="9.5" fill="#4a6fa5" letter-spacing="2" text-anchor="middle">PRE-FILLED INJECTION PEN</text>
+    <line x1="20" y1="148" x2="240" y2="148" stroke="#4a9eff" stroke-width="0.8" opacity="0.4"/>
+    <!-- Dosage info -->
+    <text x="130" y="170" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1b2a4a" text-anchor="middle">12 mg / 0.6 mL</text>
+    <text x="130" y="188" font-family="Arial, sans-serif" font-size="11" fill="#4a6fa5" text-anchor="middle">20 mg/mL</text>
+    <line x1="20" y1="200" x2="240" y2="200" stroke="#c0ccd8" stroke-width="0.8"/>
+    <!-- Lot / Dates -->
+    <text x="25"  y="220" font-family="Arial, sans-serif" font-size="9" fill="#5a6a7a">LOT: RTT240501</text>
+    <text x="25"  y="236" font-family="Arial, sans-serif" font-size="9" fill="#5a6a7a">MFG: 05 MAY 2024</text>
+    <text x="25"  y="252" font-family="Arial, sans-serif" font-size="9" fill="#5a6a7a">EXP: 05 MAY 2026</text>
+    <!-- Storage -->
+    <text x="25"  y="272" font-family="Arial, sans-serif" font-size="8.5" fill="#4a6fa5">Store at 2°C – 8°C</text>
+    <text x="25"  y="286" font-family="Arial, sans-serif" font-size="8.5" fill="#4a6fa5">Do not freeze</text>
+    <!-- QR placeholder -->
+    <rect x="180" y="218" width="60" height="60" rx="4" fill="#0d1f3c"/>
+    <rect x="184" y="222" width="52" height="52" rx="3" fill="#f0f4f8"/>
+    <rect x="188" y="226" width="14" height="14" rx="1" fill="#0d1f3c"/>
+    <rect x="218" y="226" width="14" height="14" rx="1" fill="#0d1f3c"/>
+    <rect x="188" y="256" width="14" height="14" rx="1" fill="#0d1f3c"/>
+    <rect x="207" y="242" width="5"  height="5"  fill="#0d1f3c"/>
+    <rect x="215" y="250" width="5"  height="5"  fill="#0d1f3c"/>
+    <rect x="207" y="257" width="5"  height="5"  fill="#0d1f3c"/>
+    <text x="209" y="295" font-family="Arial, sans-serif" font-size="6.5" fill="#4a6fa5" text-anchor="middle">SCAN TO AUTH</text>
+    <!-- Bottom strip -->
+    <rect x="0" y="300" width="260" height="20" rx="0" fill="#0d1f3c"/>
+    <rect x="0" y="300" width="260" height="20" rx="10" ry="0" fill="#0d1f3c"/>
+    <rect x="0" y="308" width="260" height="12" rx="0" fill="#0d1f3c"/>
+    <text x="130" y="315" font-family="Arial, sans-serif" font-size="7.5" fill="#a8c4e0" letter-spacing="2" text-anchor="middle">ADVANCEDPEPTIDESUK.CO.UK</text>
+  </g>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- INJECTION PEN ILLUSTRATION                        -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <g transform="translate(430, 450)">
+    <!-- Pen shadow -->
+    <ellipse cx="155" cy="305" rx="65" ry="8" fill="#c0ccd8" opacity="0.5"/>
+    <!-- Pen cap (navy) -->
+    <rect x="120" y="20" width="70" height="80" rx="10" fill="#0d1f3c"/>
+    <rect x="120" y="80" width="70" height="10" fill="#1b3a6b"/>
+    <!-- Pen clip -->
+    <rect x="178" y="15" width="8" height="70" rx="4" fill="#1b3a6b"/>
+    <!-- Pen body -->
+    <rect x="120" y="90" width="70" height="190" rx="6" fill="#f8fafc"/>
+    <rect x="120" y="90" width="70" height="190" rx="6" fill="none" stroke="#c0ccd8" stroke-width="1.5"/>
+    <!-- Pen label band -->
+    <rect x="122" y="100" width="66" height="120" rx="4" fill="#eef4fc"/>
+    <!-- Label text -->
+    <text x="155" y="122" font-family="Arial, sans-serif" font-size="7" fill="#1b2a4a" text-anchor="middle" font-weight="bold" letter-spacing="1.5">ADVANCED PEPTIDES UK</text>
+    <line x1="130" y1="127" x2="180" y2="127" stroke="#4a9eff" stroke-width="0.7" opacity="0.6"/>
+    <text x="155" y="143" font-family="Georgia, serif" font-size="10" fill="#0d1f3c" text-anchor="middle" font-weight="bold">RETATRUTIDE</text>
+    <line x1="130" y1="150" x2="180" y2="150" stroke="#c0ccd8" stroke-width="0.7"/>
+    <text x="155" y="163" font-family="Arial, sans-serif" font-size="7.5" fill="#4a6fa5" text-anchor="middle">12 mg / 0.6 mL</text>
+    <text x="155" y="176" font-family="Arial, sans-serif" font-size="7" fill="#4a6fa5" text-anchor="middle">20 mg/mL</text>
+    <!-- Dose window -->
+    <rect x="133" y="183" width="44" height="22" rx="5" fill="#0d1f3c" opacity="0.15"/>
+    <rect x="133" y="183" width="44" height="22" rx="5" fill="none" stroke="#4a9eff" stroke-width="1"/>
+    <text x="155" y="198" font-family="Arial, sans-serif" font-size="9.5" fill="#0d1f3c" text-anchor="middle" font-weight="bold">12 mg</text>
+    <!-- Pen bottom -->
+    <rect x="120" y="280" width="70" height="20" rx="6" fill="#e0e8f0"/>
+    <rect x="120" y="270" width="70" height="15" fill="#e0e8f0"/>
+    <!-- Needle tip -->
+    <polygon points="155,300 148,315 162,315" fill="#c0ccd8"/>
+    <line x1="155" y1="300" x2="155" y2="320" stroke="#a0aab4" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- BOTTOM ICONS BANNER                               -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <rect x="40" y="1040" width="720" height="120" rx="0" fill="url(#bannerGrad)"/>
+  <rect x="40" y="1040" width="720" height="120" rx="0" fill="none" stroke="none"/>
+  <!-- Round bottom corners -->
+  <rect x="40" y="1120" width="720" height="40" rx="18" ry="18" fill="#1b3a6b"/>
+  <rect x="40" y="1100" width="720" height="20" fill="#0d1f3c"/>
+  <rect x="40" y="1040" width="720" height="120" rx="0" fill="url(#bannerGrad)"/>
+  <!-- Icon 1 — Research Use Only -->
+  <circle cx="130" cy="1075" r="20" fill="none" stroke="#4a9eff" stroke-width="1.5" opacity="0.8"/>
+  <text x="130" y="1070" font-family="Arial" font-size="16" fill="#4a9eff" text-anchor="middle">🔬</text>
+  <text x="130" y="1106" font-family="Arial, sans-serif" font-size="8.5" fill="#a8c4e0" text-anchor="middle" font-weight="bold">RESEARCH USE ONLY</text>
+  <text x="130" y="1118" font-family="Arial, sans-serif" font-size="7.5" fill="#7090b0" text-anchor="middle">Not for human consumption</text>
+  <!-- Icon 2 — High Purity -->
+  <circle cx="310" cy="1075" r="20" fill="none" stroke="#4a9eff" stroke-width="1.5" opacity="0.8"/>
+  <text x="310" y="1070" font-family="Arial" font-size="16" fill="#4a9eff" text-anchor="middle">⭐</text>
+  <text x="310" y="1106" font-family="Arial, sans-serif" font-size="8.5" fill="#a8c4e0" text-anchor="middle" font-weight="bold">HIGH PURITY</text>
+  <text x="310" y="1118" font-family="Arial, sans-serif" font-size="7.5" fill="#7090b0" text-anchor="middle">Research Grade</text>
+  <!-- Icon 3 — Cold Stored -->
+  <circle cx="490" cy="1075" r="20" fill="none" stroke="#4a9eff" stroke-width="1.5" opacity="0.8"/>
+  <text x="490" y="1070" font-family="Arial" font-size="16" fill="#4a9eff" text-anchor="middle">❄️</text>
+  <text x="490" y="1106" font-family="Arial, sans-serif" font-size="8.5" fill="#a8c4e0" text-anchor="middle" font-weight="bold">COLD STORED 2°C–8°C</text>
+  <text x="490" y="1118" font-family="Arial, sans-serif" font-size="7.5" fill="#7090b0" text-anchor="middle">Refrigerated at all times</text>
+  <!-- Icon 4 — Quality Assured -->
+  <circle cx="670" cy="1075" r="20" fill="none" stroke="#4a9eff" stroke-width="1.5" opacity="0.8"/>
+  <text x="670" y="1070" font-family="Arial" font-size="16" fill="#4a9eff" text-anchor="middle">✅</text>
+  <text x="670" y="1106" font-family="Arial, sans-serif" font-size="8.5" fill="#a8c4e0" text-anchor="middle" font-weight="bold">QUALITY ASSURED</text>
+  <text x="670" y="1118" font-family="Arial, sans-serif" font-size="7.5" fill="#7090b0" text-anchor="middle">Trusted Peptide Solutions</text>
+
+  <!-- Divider lines between icons -->
+  <line x1="220" y1="1055" x2="220" y2="1145" stroke="#2a4070" stroke-width="1" opacity="0.6"/>
+  <line x1="400" y1="1055" x2="400" y2="1145" stroke="#2a4070" stroke-width="1" opacity="0.6"/>
+  <line x1="580" y1="1055" x2="580" y2="1145" stroke="#2a4070" stroke-width="1" opacity="0.6"/>
+
+  <!-- ══════════════════════════════════════════════════ -->
+  <!-- FOOTER                                            -->
+  <!-- ══════════════════════════════════════════════════ -->
+  <text x="400" y="1175" font-family="Arial, Helvetica, sans-serif" font-size="8" fill="#4a6fa5" text-anchor="middle" letter-spacing="2">WWW.ADVANCEDPEPTIDESUK.CO.UK  |  LONDON, UK</text>
+  <text x="400" y="1190" font-family="Arial, Helvetica, sans-serif" font-size="7.5" fill="#2a3f5a" text-anchor="middle">* This statement has not been evaluated by the MHRA. For research purposes only.</text>
+
+</svg>

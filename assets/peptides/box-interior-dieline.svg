@@ -1,0 +1,423 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 1060" width="1060" height="1060">
+  <!--
+    ═══════════════════════════════════════════════════════
+    ADVANCED PEPTIDES UK — BOX INTERIOR DIELINE
+    Scale: 1cm = 40px
+    Box dimensions: W 20cm × L 10cm × H 2.5cm
+    ═══════════════════════════════════════════════════════
+    LAYOUT (unfolded, top-to-bottom):
+
+      [  LID SIDE WALL  2.5cm × 20cm  ]
+      [  LID INTERIOR   10cm × 20cm   ]
+      [  LID SIDE WALL  2.5cm × 20cm  ]
+               ← fold lines →
+      [ BASE SIDE WALL  2.5cm × 20cm  ]
+      [  BASE INTERIOR  10cm × 20cm   ]
+      [ BASE SIDE WALL  2.5cm × 20cm  ]
+
+    Dimensions in px (1cm = 40px):
+      W = 20cm = 800px
+      L = 10cm = 400px
+      H = 2.5cm = 100px
+  -->
+
+  <defs>
+    <linearGradient id="lidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#0a1628"/>
+      <stop offset="60%" stop-color="#0d1f3c"/>
+      <stop offset="100%" stop-color="#1b3a6b"/>
+    </linearGradient>
+    <linearGradient id="sideGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#0d1f3c"/>
+      <stop offset="100%" stop-color="#162d52"/>
+    </linearGradient>
+    <linearGradient id="foamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#f0f4f8"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="channelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#d4dce8"/>
+      <stop offset="50%"  stop-color="#b8c6d8"/>
+      <stop offset="100%" stop-color="#d4dce8"/>
+    </linearGradient>
+    <pattern id="hexBg" x="0" y="0" width="40" height="35" patternUnits="userSpaceOnUse">
+      <polygon points="20,1 39,11 39,30 20,40 1,30 1,11"
+               fill="none" stroke="#1e3560" stroke-width="0.6" opacity="0.4"/>
+    </pattern>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="3" dy="3" stdDeviation="5" flood-color="#00000040"/>
+    </filter>
+    <!-- Subtle foam texture -->
+    <pattern id="foamTexture" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.2" fill="#c8d4e0" opacity="0.35"/>
+    </pattern>
+  </defs>
+
+  <!-- ═══════════════ PAGE BACKGROUND ═══════════════ -->
+  <rect width="1060" height="1060" fill="#d0d8e4"/>
+
+  <!-- Title -->
+  <text x="530" y="28" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#1b2a4a"
+        font-weight="bold" text-anchor="middle" letter-spacing="3">
+    ADVANCED PEPTIDES UK — BOX INTERIOR DIELINE
+  </text>
+  <text x="530" y="46" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#4a6fa5"
+        text-anchor="middle" letter-spacing="2">
+    W 20cm × L 10cm × H 2.5cm  |  Scale 1:1 (1cm = 40px)
+  </text>
+
+  <!-- ═══════════════════════════════════════════════
+       DIELINE GROUP — centred at x=130
+       Total width:  800px (20cm)
+       Total height: 800px (H+L+H+H+L+H = 100+400+100+100+400+100)
+       Offset from top: y=65
+  ═══════════════════════════════════════════════ -->
+  <g transform="translate(130, 65)">
+
+    <!-- ─── RULER: horizontal (top) ─── -->
+    <line x1="0" y1="-15" x2="800" y2="-15" stroke="#4a6fa5" stroke-width="0.8"/>
+    <line x1="0" y1="-20" x2="0" y2="-10" stroke="#4a6fa5" stroke-width="0.8"/>
+    <line x1="800" y1="-20" x2="800" y2="-10" stroke="#4a6fa5" stroke-width="0.8"/>
+    <text x="400" y="-19" font-family="Arial" font-size="9" fill="#4a6fa5" text-anchor="middle">20 cm</text>
+
+    <!-- ─── RULER: vertical (left) ─── -->
+    <!-- lid side: 100px -->
+    <line x1="-12" y1="0"   x2="-12" y2="100"  stroke="#4a6fa5" stroke-width="0.8"/>
+    <line x1="-17" y1="0"   x2="-7"  y2="0"    stroke="#4a6fa5" stroke-width="0.8"/>
+    <line x1="-17" y1="100" x2="-7"  y2="100"  stroke="#4a6fa5" stroke-width="0.8"/>
+    <text x="-20" y="53" font-family="Arial" font-size="9" fill="#4a6fa5" text-anchor="middle" transform="rotate(-90,-20,53)">2.5cm</text>
+    <!-- lid interior: 400px -->
+    <line x1="-12" y1="100" x2="-12" y2="500"  stroke="#4a6fa5" stroke-width="0.8"/>
+    <line x1="-17" y1="500" x2="-7"  y2="500"  stroke="#4a6fa5" stroke-width="0.8"/>
+    <text x="-20" y="300" font-family="Arial" font-size="9" fill="#4a6fa5" text-anchor="middle" transform="rotate(-90,-20,300)">10 cm</text>
+    <!-- lid side: 100px -->
+    <line x1="-12" y1="500" x2="-12" y2="600"  stroke="#4a6fa5" stroke-width="0.8"/>
+    <line x1="-17" y1="600" x2="-7"  y2="600"  stroke="#4a6fa5" stroke-width="0.8"/>
+    <text x="-20" y="553" font-family="Arial" font-size="9" fill="#4a6fa5" text-anchor="middle" transform="rotate(-90,-20,553)">2.5cm</text>
+    <!-- base side: 100px -->
+    <line x1="-12" y1="600" x2="-12" y2="700"  stroke="#4a6fa5" stroke-width="0.8"/>
+    <line x1="-17" y1="700" x2="-7"  y2="700"  stroke="#4a6fa5" stroke-width="0.8"/>
+    <text x="-20" y="653" font-family="Arial" font-size="9" fill="#4a6fa5" text-anchor="middle" transform="rotate(-90,-20,653)">2.5cm</text>
+    <!-- base interior: 400px -->
+    <line x1="-12" y1="700" x2="-12" y2="1100" stroke="#4a6fa5" stroke-width="0.8"/>
+    <line x1="-17" y1="1100" x2="-7" y2="1100" stroke="#4a6fa5" stroke-width="0.8"/>
+    <text x="-20" y="900" font-family="Arial" font-size="9" fill="#4a6fa5" text-anchor="middle" transform="rotate(-90,-20,900)">10 cm</text>
+    <!-- base side: 100px -->
+    <!-- (handled by outer edge) -->
+
+    <!-- ══════════════════════════════════════════════════
+         SECTION 1: LID SIDE WALL TOP  (y=0..100)
+    ══════════════════════════════════════════════════ -->
+    <rect x="0" y="0" width="800" height="100" fill="url(#sideGrad)" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="800" height="100" fill="url(#hexBg)"/>
+    <!-- edge indicator -->
+    <rect x="0" y="0" width="800" height="4" fill="#4a9eff" opacity="0.6"/>
+    <text x="400" y="58" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#a8c4e0"
+          text-anchor="middle" letter-spacing="3">LID — SIDE WALL (INTERIOR)</text>
+    <text x="400" y="75" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#5a7aaa"
+          text-anchor="middle">2.5 cm × 20 cm</text>
+    <!-- Fold line (dashed) at bottom -->
+    <line x1="0" y1="100" x2="800" y2="100" stroke="#4a9eff" stroke-width="1.5"
+          stroke-dasharray="8,5" opacity="0.9"/>
+
+    <!-- ══════════════════════════════════════════════════
+         SECTION 2: LID INTERIOR  (y=100..500)
+    ══════════════════════════════════════════════════ -->
+    <!-- Background -->
+    <rect x="0" y="100" width="800" height="400" fill="url(#lidGrad)" filter="url(#shadow)"/>
+    <rect x="0" y="100" width="800" height="400" fill="url(#hexBg)"/>
+
+    <!-- Subtle vignette -->
+    <rect x="0" y="100" width="800" height="400" fill="none"
+          stroke="#0a1628" stroke-width="20" opacity="0.3"/>
+
+    <!-- ─── DNA HELIX (large, centred) ─── -->
+    <!-- Left spine -->
+    <line x1="348" y1="160" x2="348" y2="440" stroke="#4a9eff" stroke-width="3" stroke-linecap="round"/>
+    <!-- Right spine -->
+    <line x1="388" y1="160" x2="388" y2="440" stroke="#4a9eff" stroke-width="3" stroke-linecap="round"/>
+    <!-- Rungs + dots -->
+    <line x1="348" y1="178" x2="388" y2="193" stroke="#7ec8ff" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="348" cy="178" r="5" fill="#4a9eff"/>
+    <circle cx="388" cy="193" r="5" fill="#4a9eff"/>
+
+    <line x1="348" y1="213" x2="388" y2="228" stroke="#7ec8ff" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="348" cy="213" r="5" fill="#4a9eff"/>
+    <circle cx="388" cy="228" r="5" fill="#4a9eff"/>
+
+    <line x1="348" y1="248" x2="388" y2="263" stroke="#7ec8ff" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="348" cy="248" r="5" fill="#4a9eff"/>
+    <circle cx="388" cy="263" r="5" fill="#4a9eff"/>
+
+    <line x1="348" y1="283" x2="388" y2="298" stroke="#7ec8ff" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="348" cy="283" r="5" fill="#4a9eff"/>
+    <circle cx="388" cy="298" r="5" fill="#4a9eff"/>
+
+    <line x1="348" y1="318" x2="388" y2="333" stroke="#7ec8ff" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="348" cy="318" r="5" fill="#4a9eff"/>
+    <circle cx="388" cy="333" r="5" fill="#4a9eff"/>
+
+    <line x1="348" y1="353" x2="388" y2="368" stroke="#7ec8ff" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="348" cy="353" r="5" fill="#4a9eff"/>
+    <circle cx="388" cy="368" r="5" fill="#4a9eff"/>
+
+    <line x1="348" y1="388" x2="388" y2="403" stroke="#7ec8ff" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="348" cy="388" r="5" fill="#4a9eff"/>
+    <circle cx="388" cy="403" r="5" fill="#4a9eff"/>
+
+    <line x1="348" y1="423" x2="388" y2="438" stroke="#7ec8ff" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="348" cy="423" r="5" fill="#4a9eff"/>
+    <circle cx="388" cy="438" r="5" fill="#4a9eff"/>
+
+    <!-- ─── BRAND TEXT ─── -->
+    <text x="400" y="185" font-family="Georgia, 'Times New Roman', serif"
+          font-size="36" font-weight="bold" fill="#ffffff" text-anchor="middle"
+          letter-spacing="5" opacity="0.97">ADVANCED PEPTIDES UK</text>
+
+    <!-- Decorative lines either side of brand -->
+    <line x1="60"  y1="192" x2="310" y2="192" stroke="#4a9eff" stroke-width="1" opacity="0.6"/>
+    <line x1="490" y1="192" x2="740" y2="192" stroke="#4a9eff" stroke-width="1" opacity="0.6"/>
+
+    <!-- Tagline -->
+    <text x="400" y="225" font-family="Arial, Helvetica, sans-serif"
+          font-size="13" fill="#a8c4e0" text-anchor="middle" letter-spacing="6">
+      ADVANCED PEPTIDE THERAPY
+    </text>
+    <text x="400" y="248" font-family="Arial, Helvetica, sans-serif"
+          font-size="13" fill="#a8c4e0" text-anchor="middle" letter-spacing="6">
+      ENGINEERED FOR PRECISION
+    </text>
+
+    <!-- Horizontal rule -->
+    <line x1="100" y1="268" x2="700" y2="268" stroke="#2a4a7a" stroke-width="1" opacity="0.7"/>
+
+    <!-- Product Name -->
+    <text x="400" y="320" font-family="Georgia, 'Times New Roman', serif"
+          font-size="48" font-weight="bold" fill="#4a9eff" text-anchor="middle"
+          letter-spacing="4" opacity="0.9">RETATRUTIDE</text>
+    <text x="400" y="350" font-family="Arial, Helvetica, sans-serif"
+          font-size="11" fill="#7090b0" text-anchor="middle" letter-spacing="5">
+      PRE-FILLED INJECTION PEN  |  12 mg / 0.6 mL  |  20 mg/mL
+    </text>
+
+    <!-- Thin bottom rule -->
+    <line x1="100" y1="368" x2="700" y2="368" stroke="#2a4a7a" stroke-width="1" opacity="0.7"/>
+
+    <!-- Website + Cert line -->
+    <text x="400" y="400" font-family="Arial, Helvetica, sans-serif"
+          font-size="10" fill="#4a7aaa" text-anchor="middle" letter-spacing="3">
+      WWW.ADVANCEDPEPTIDESUK.CO.UK  |  LONDON, UNITED KINGDOM
+    </text>
+    <text x="400" y="422" font-family="Arial, Helvetica, sans-serif"
+          font-size="9" fill="#2a3f5a" text-anchor="middle" letter-spacing="2" opacity="0.8">
+      ✦  RESEARCH USE ONLY — NOT FOR HUMAN CONSUMPTION  ✦
+    </text>
+
+    <!-- Corner registration marks -->
+    <g stroke="#4a9eff" stroke-width="1" opacity="0.5">
+      <line x1="10" y1="100" x2="10" y2="120"/><line x1="0"  y1="110" x2="20" y2="110"/>
+      <line x1="790" y1="100" x2="790" y2="120"/><line x1="780" y1="110" x2="800" y2="110"/>
+      <line x1="10" y1="480" x2="10" y2="500"/><line x1="0"  y1="490" x2="20" y2="490"/>
+      <line x1="790" y1="480" x2="790" y2="500"/><line x1="780" y1="490" x2="800" y2="490"/>
+    </g>
+
+    <!-- Fold line bottom -->
+    <line x1="0" y1="500" x2="800" y2="500" stroke="#4a9eff" stroke-width="1.5"
+          stroke-dasharray="8,5" opacity="0.9"/>
+
+    <!-- ══════════════════════════════════════════════════
+         SECTION 3: LID SIDE WALL BOTTOM  (y=500..600)
+    ══════════════════════════════════════════════════ -->
+    <rect x="0" y="500" width="800" height="100" fill="url(#sideGrad)"/>
+    <rect x="0" y="500" width="800" height="100" fill="url(#hexBg)"/>
+    <rect x="0" y="596" width="800" height="4" fill="#4a9eff" opacity="0.6"/>
+    <text x="400" y="558" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#a8c4e0"
+          text-anchor="middle" letter-spacing="3">LID — SIDE WALL (INTERIOR)</text>
+    <text x="400" y="575" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#5a7aaa"
+          text-anchor="middle">2.5 cm × 20 cm</text>
+
+    <!-- ═══════ GAP / HINGE INDICATOR ═══════ -->
+    <line x1="0" y1="600" x2="800" y2="600" stroke="#e0a020" stroke-width="2"
+          stroke-dasharray="12,6" opacity="0.9"/>
+    <text x="400" y="614" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#c08010"
+          text-anchor="middle" letter-spacing="2">— HINGE / MAGNETIC CLOSURE —</text>
+    <line x1="0" y1="624" x2="800" y2="624" stroke="#e0a020" stroke-width="2"
+          stroke-dasharray="12,6" opacity="0.9"/>
+
+    <!-- ══════════════════════════════════════════════════
+         SECTION 4: BASE SIDE WALL TOP  (y=624..724)
+    ══════════════════════════════════════════════════ -->
+    <rect x="0" y="624" width="800" height="100" fill="url(#sideGrad)" filter="url(#shadow)"/>
+    <rect x="0" y="624" width="800" height="100" fill="url(#hexBg)"/>
+    <rect x="0" y="624" width="800" height="4" fill="#4a9eff" opacity="0.6"/>
+    <text x="400" y="682" font-family="Arial, Helvetica, sans-serif" font-size="10" fill="#a8c4e0"
+          text-anchor="middle" letter-spacing="3">BASE — SIDE WALL (INTERIOR)</text>
+    <text x="400" y="699" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#5a7aaa"
+          text-anchor="middle">2.5 cm × 20 cm</text>
+    <line x1="0" y1="724" x2="800" y2="724" stroke="#4a9eff" stroke-width="1.5"
+          stroke-dasharray="8,5" opacity="0.9"/>
+
+    <!-- ══════════════════════════════════════════════════
+         SECTION 5: BASE INTERIOR — FOAM INSERT TRAY
+         (y=724..1124)  =  10cm tall × 20cm wide
+    ══════════════════════════════════════════════════ -->
+    <!-- Base background -->
+    <rect x="0" y="724" width="800" height="400" fill="url(#foamGrad)" filter="url(#shadow)"/>
+    <rect x="0" y="724" width="800" height="400" fill="url(#foamTexture)"/>
+    <!-- Outer border -->
+    <rect x="0" y="724" width="800" height="400" fill="none"
+          stroke="#b0bcc8" stroke-width="2"/>
+
+    <!-- Label -->
+    <text x="400" y="752" font-family="Arial, Helvetica, sans-serif" font-size="10"
+          fill="#4a6fa5" text-anchor="middle" letter-spacing="3" opacity="0.7">
+      BASE INTERIOR — FOAM INSERT TRAY
+    </text>
+
+    <!--
+        COMPARTMENT LAYOUT (actual mm inside the 20×10cm base):
+        ──────────────────────────────────────────────────────
+        Pen channel:     ~15.5cm W × 1.5cm H  (centred vertically)
+                         left edge ~0.8cm from left wall
+        Instruction box: ~3.2cm W × 3.5cm H   (bottom-left)
+        Needle box:      ~3.2cm W × 3.5cm H   (bottom-right)
+        In px (40px/cm):
+          Pen channel:   620px W × 60px H  offset x=32, y (centred within 400h base section at 724)
+          Instructions:  128px W × 140px H  at x=32, y=890
+          Needles:       128px W × 140px H  at x=640, y=890
+    -->
+
+    <!-- ── PEN CHANNEL (injection pen cutout) ── -->
+    <!-- Shadow -->
+    <rect x="36" y="784" width="624" height="68" rx="34" fill="#a0aab8" opacity="0.5"/>
+    <!-- Channel -->
+    <rect x="32" y="780" width="624" height="68" rx="34" fill="url(#channelGrad)"/>
+    <rect x="32" y="780" width="624" height="68" rx="34" fill="none"
+          stroke="#7090a8" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <!-- Channel sheen -->
+    <rect x="40" y="784" width="608" height="18" rx="9" fill="#ffffff" opacity="0.35"/>
+    <!-- Label -->
+    <text x="344" y="819" font-family="Arial, Helvetica, sans-serif" font-size="10"
+          fill="#2a3f5a" text-anchor="middle" letter-spacing="2">INJECTION PEN  |  15.5 cm × 1.5 cm</text>
+    <!-- End circles (pen shape hints) -->
+    <circle cx="66"  cy="814" r="28" fill="#c8d4e0" opacity="0.4"/>
+    <circle cx="622" cy="814" r="22" fill="#c8d4e0" opacity="0.4"/>
+
+    <!-- Pen centre line (guide) -->
+    <line x1="32" y1="814" x2="656" y2="814" stroke="#7090a8" stroke-width="0.6"
+          stroke-dasharray="4,4" opacity="0.5"/>
+
+    <!-- ── INSTRUCTION BOX CUTOUT ── -->
+    <rect x="36" y="890" width="132" height="144" rx="6" fill="#a0aab8" opacity="0.4"/>
+    <rect x="32" y="886" width="132" height="144" rx="6" fill="#d4dce8"/>
+    <rect x="32" y="886" width="132" height="144" rx="6" fill="none"
+          stroke="#7090a8" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <!-- Sheen -->
+    <rect x="36" y="890" width="124" height="18" rx="4" fill="#ffffff" opacity="0.3"/>
+    <!-- Mini logo -->
+    <line x1="82" y1="910" x2="82" y2="960" stroke="#4a9eff" stroke-width="1.5"/>
+    <line x1="94" y1="910" x2="94" y2="960" stroke="#4a9eff" stroke-width="1.5"/>
+    <line x1="82" y1="918" x2="94" y2="924" stroke="#7ec8ff" stroke-width="1.2"/>
+    <line x1="82" y1="932" x2="94" y2="938" stroke="#7ec8ff" stroke-width="1.2"/>
+    <line x1="82" y1="946" x2="94" y2="952" stroke="#7ec8ff" stroke-width="1.2"/>
+    <circle cx="82" cy="918" r="2.5" fill="#4a9eff"/>
+    <circle cx="94" cy="924" r="2.5" fill="#4a9eff"/>
+    <circle cx="82" cy="946" r="2.5" fill="#4a9eff"/>
+    <circle cx="94" cy="952" r="2.5" fill="#4a9eff"/>
+    <!-- Text -->
+    <text x="98" y="930" font-family="Arial, sans-serif" font-size="8" fill="#1b2a4a"
+          font-weight="bold" letter-spacing="1">INSTRUCTIONS</text>
+    <text x="98" y="944" font-family="Arial, sans-serif" font-size="8" fill="#1b2a4a"
+          font-weight="bold" letter-spacing="1">FOR USE</text>
+    <!-- Size note -->
+    <text x="98" y="990" font-family="Arial, sans-serif" font-size="7.5" fill="#5a7a9a"
+          text-anchor="middle">3.2 cm × 3.5 cm</text>
+    <text x="98" y="1003" font-family="Arial, sans-serif" font-size="7" fill="#7a9aaa"
+          text-anchor="middle" letter-spacing="1">BOOKLET</text>
+
+    <!-- ── NEEDLE INSERTS CUTOUT ── -->
+    <rect x="636" y="890" width="132" height="144" rx="6" fill="#a0aab8" opacity="0.4"/>
+    <rect x="636" y="886" width="132" height="144" rx="6" fill="#d4dce8"/>
+    <rect x="636" y="886" width="132" height="144" rx="6" fill="none"
+          stroke="#7090a8" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <!-- Sheen -->
+    <rect x="640" y="890" width="124" height="18" rx="4" fill="#ffffff" opacity="0.3"/>
+    <!-- Needle icon (simple) -->
+    <rect x="665" y="920" width="48" height="8" rx="4" fill="#4a9eff" opacity="0.7"/>
+    <polygon points="713,920 726,924 713,928" fill="#7ec8ff" opacity="0.8"/>
+    <!-- count badge -->
+    <circle cx="702" cy="945" r="12" fill="#0d1f3c" opacity="0.7"/>
+    <text x="702" y="949" font-family="Arial, sans-serif" font-size="10" fill="#ffffff"
+          text-anchor="middle" font-weight="bold">10</text>
+    <!-- Text -->
+    <text x="702" y="970" font-family="Arial, sans-serif" font-size="8" fill="#1b2a4a"
+          font-weight="bold" letter-spacing="1" text-anchor="middle">NEEDLE</text>
+    <text x="702" y="983" font-family="Arial, sans-serif" font-size="8" fill="#1b2a4a"
+          font-weight="bold" letter-spacing="1" text-anchor="middle">INSERTS</text>
+    <text x="702" y="997" font-family="Arial, sans-serif" font-size="7.5" fill="#5a7a9a"
+          text-anchor="middle">3.2 cm × 3.5 cm</text>
+    <text x="702" y="1010" font-family="Arial, sans-serif" font-size="7" fill="#7a9aaa"
+          text-anchor="middle" letter-spacing="1">10 PCS</text>
+
+    <!-- Spacing dimension arrows inside base -->
+    <!-- Arrow: pen channel width -->
+    <line x1="32"  y1="870" x2="656" y2="870" stroke="#4a6fa5" stroke-width="0.8" opacity="0.6"/>
+    <polygon points="32,867 32,873 20,870"  fill="#4a6fa5" opacity="0.6"/>
+    <polygon points="656,867 656,873 668,870" fill="#4a6fa5" opacity="0.6"/>
+    <text x="344" y="866" font-family="Arial" font-size="8" fill="#4a6fa5" text-anchor="middle" opacity="0.7">15.5 cm</text>
+
+    <!-- Fold line bottom of base interior -->
+    <line x1="0" y1="1124" x2="800" y2="1124" stroke="#4a9eff" stroke-width="1.5"
+          stroke-dasharray="8,5" opacity="0.9"/>
+
+    <!-- ══════════════════════════════════════════════════
+         SECTION 6: BASE SIDE WALL BOTTOM  (y=1124..1224  → clipped to 1200)
+    ══════════════════════════════════════════════════ -->
+    <!-- (Below canvas — shown as partial for completeness, label above fold) -->
+    <text x="400" y="1143" font-family="Arial, Helvetica, sans-serif" font-size="9" fill="#8090a0"
+          text-anchor="middle" letter-spacing="2">BASE SIDE WALL BELOW ↓</text>
+
+  </g>
+
+  <!-- ═══════════════ LEGEND ═══════════════ -->
+  <g transform="translate(130, 1005)">
+    <text x="0" y="15" font-family="Arial" font-size="9" fill="#4a6fa5" font-weight="bold"
+          letter-spacing="2">LEGEND</text>
+    <!-- Fold line -->
+    <line x1="60" y1="10" x2="110" y2="10" stroke="#4a9eff" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <text x="116" y="14" font-family="Arial" font-size="8.5" fill="#4a6fa5">Fold / score line</text>
+    <!-- Hinge line -->
+    <line x1="230" y1="10" x2="280" y2="10" stroke="#e0a020" stroke-width="1.5" stroke-dasharray="10,5"/>
+    <text x="286" y="14" font-family="Arial" font-size="8.5" fill="#c08010">Hinge / magnetic closure</text>
+    <!-- Cut line -->
+    <line x1="430" y1="10" x2="480" y2="10" stroke="#1b2a4a" stroke-width="1.5"/>
+    <text x="486" y="14" font-family="Arial" font-size="8.5" fill="#1b2a4a">Cut / outer edge</text>
+    <!-- Foam cutout -->
+    <rect x="610" y="4" width="16" height="12" rx="2" fill="#d4dce8" stroke="#7090a8" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="632" y="14" font-family="Arial" font-size="8.5" fill="#5a7a9a">Foam cutout</text>
+  </g>
+
+  <!-- ═══════════════ DIMENSION CALLOUT BOX ═══════════════ -->
+  <g transform="translate(940, 65)">
+    <rect x="0" y="0" width="110" height="180" rx="8" fill="#0d1f3c" opacity="0.9"/>
+    <text x="55" y="20" font-family="Arial" font-size="9" fill="#a8c4e0" text-anchor="middle"
+          font-weight="bold" letter-spacing="2">DIMENSIONS</text>
+    <line x1="10" y1="26" x2="100" y2="26" stroke="#4a9eff" stroke-width="0.7" opacity="0.5"/>
+    <text x="12" y="42" font-family="Arial" font-size="8.5" fill="#7ec8ff">Width</text>
+    <text x="98" y="42" font-family="Arial" font-size="8.5" fill="#ffffff" text-anchor="end">20 cm</text>
+    <text x="12" y="58" font-family="Arial" font-size="8.5" fill="#7ec8ff">Length</text>
+    <text x="98" y="58" font-family="Arial" font-size="8.5" fill="#ffffff" text-anchor="end">10 cm</text>
+    <text x="12" y="74" font-family="Arial" font-size="8.5" fill="#7ec8ff">Height</text>
+    <text x="98" y="74" font-family="Arial" font-size="8.5" fill="#ffffff" text-anchor="end">2.5 cm</text>
+    <line x1="10" y1="82" x2="100" y2="82" stroke="#4a9eff" stroke-width="0.7" opacity="0.5"/>
+    <text x="12" y="96" font-family="Arial" font-size="8.5" fill="#7ec8ff">Scale</text>
+    <text x="98" y="96" font-family="Arial" font-size="8.5" fill="#ffffff" text-anchor="end">1:1</text>
+    <text x="12" y="110" font-family="Arial" font-size="8" fill="#5a7aaa">(1cm = 40px)</text>
+    <line x1="10" y1="118" x2="100" y2="118" stroke="#4a9eff" stroke-width="0.7" opacity="0.5"/>
+    <text x="12" y="132" font-family="Arial" font-size="8.5" fill="#7ec8ff">Sections</text>
+    <text x="12" y="147" font-family="Arial" font-size="8" fill="#a8c4e0">Lid interior</text>
+    <text x="12" y="160" font-family="Arial" font-size="8" fill="#a8c4e0">Base tray</text>
+    <text x="12" y="173" font-family="Arial" font-size="8" fill="#a8c4e0">4 × side walls</text>
+  </g>
+
+</svg>
