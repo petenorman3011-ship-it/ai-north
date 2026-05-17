@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 300" width="1020" height="300">
+  <!--
+    ADVANCED PEPTIDES UK — RETATRUTIDE BOX FRONT COVER
+    Supplier Print Artwork
+    Front panel: ~170mm × 50mm  |  Side panel: ~30mm × 50mm
+    Scale: 1mm ≈ 6px
+  -->
+  <defs>
+    <!-- Holographic strip gradient -->
+    <linearGradient id="holoStrip" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#c8d8e8"/>
+      <stop offset="12%"  stop-color="#d4eaf0"/>
+      <stop offset="25%"  stop-color="#c5e8d8"/>
+      <stop offset="38%"  stop-color="#e8d8f0"/>
+      <stop offset="50%"  stop-color="#f0e8c8"/>
+      <stop offset="62%"  stop-color="#d8eef8"/>
+      <stop offset="75%"  stop-color="#e8d0f0"/>
+      <stop offset="88%"  stop-color="#c8e8e0"/>
+      <stop offset="100%" stop-color="#d8e0f0"/>
+    </linearGradient>
+    <!-- Holographic badge gradient -->
+    <linearGradient id="holoBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#e8f4ff"/>
+      <stop offset="25%"  stop-color="#d4f0e8"/>
+      <stop offset="50%"  stop-color="#f0e4f8"/>
+      <stop offset="75%"  stop-color="#fef4d8"/>
+      <stop offset="100%" stop-color="#d8ecf8"/>
+    </linearGradient>
+    <!-- Side panel gradient -->
+    <linearGradient id="sidePanel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#0c1d38"/>
+      <stop offset="100%" stop-color="#1a3460"/>
+    </linearGradient>
+    <!-- Navy bottom bar -->
+    <linearGradient id="navyBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"  stop-color="#0d1f3c"/>
+      <stop offset="65%" stop-color="#0d1f3c"/>
+      <stop offset="66%" stop-color="#b8ccd8"/>
+      <stop offset="100%" stop-color="url(#holoStrip)"/>
+    </linearGradient>
+    <!-- Subtle paper background -->
+    <linearGradient id="paperBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f4f8fc"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════════════
+       FRONT PANEL  (0,0) → (800,300)
+  ═══════════════════════════════════════════════════ -->
+
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="300" fill="url(#paperBg)"/>
+
+  <!-- Outer border (die cut guide) -->
+  <rect x="0" y="0" width="800" height="300" fill="none" stroke="#0d1f3c" stroke-width="3"/>
+
+  <!-- ── MOLECULAR WATERMARK (hexagonal rings, centre-right) ── -->
+  <g opacity="0.08" fill="none" stroke="#0d1f3c" stroke-width="1.8">
+    <!-- Ring cluster 1 -->
+    <polygon points="530,80  560,63  590,80  590,114 560,131 530,114" />
+    <polygon points="590,80  620,63  650,80  650,114 620,131 590,114" />
+    <polygon points="650,80  680,63  710,80  710,114 680,131 650,114" />
+    <polygon points="560,131 590,114 620,131 620,165 590,182 560,165" />
+    <polygon points="620,131 650,114 680,131 680,165 650,182 620,165" />
+    <polygon points="530,182 560,165 590,182 590,216 560,233 530,216" />
+    <polygon points="590,182 620,165 650,182 650,216 620,233 590,216" />
+    <polygon points="650,182 680,165 710,182 710,216 680,233 650,216" />
+    <polygon points="680,131 710,114 740,131 740,165 710,182 680,165" />
+    <polygon points="710,80  740,63  770,80  770,114 740,131 710,114" />
+    <polygon points="740,131 770,114 800,131 800,165 770,182 740,165" />
+    <polygon points="710,182 740,165 770,182 770,216 740,233 710,216" />
+  </g>
+
+  <!-- ── DNA HELIX LOGO ── -->
+  <g transform="translate(30, 32)">
+    <!-- Spine L -->
+    <line x1="0"  y1="0" x2="0"  y2="80" stroke="#0d1f3c" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Spine R -->
+    <line x1="18" y1="0" x2="18" y2="80" stroke="#0d1f3c" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Rungs -->
+    <line x1="0" y1="10" x2="18" y2="17" stroke="#0d1f3c" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="0" y1="26" x2="18" y2="33" stroke="#0d1f3c" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="0" y1="42" x2="18" y2="49" stroke="#0d1f3c" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="0" y1="58" x2="18" y2="65" stroke="#0d1f3c" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="0" y1="74" x2="18" y2="80" stroke="#0d1f3c" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- Dots -->
+    <circle cx="0"  cy="10" r="3.5" fill="#0d1f3c"/>
+    <circle cx="18" cy="17" r="3.5" fill="#0d1f3c"/>
+    <circle cx="0"  cy="42" r="3.5" fill="#0d1f3c"/>
+    <circle cx="18" cy="49" r="3.5" fill="#0d1f3c"/>
+    <circle cx="0"  cy="74" r="3.5" fill="#0d1f3c"/>
+    <circle cx="18" cy="80" r="3.5" fill="#0d1f3c"/>
+  </g>
+
+  <!-- ── BRAND NAME ── -->
+  <text x="62" y="68" font-family="Arial, Helvetica, sans-serif" font-size="18"
+        font-weight="bold" fill="#0d1f3c" letter-spacing="1.5">Advanced Peptides</text>
+  <text x="62" y="90" font-family="Arial, Helvetica, sans-serif" font-size="18"
+        font-weight="bold" fill="#0d1f3c" letter-spacing="1.5">UK</text>
+
+  <!-- ── PRODUCT NAME ── -->
+  <text x="35" y="162" font-family="Arial Black, Arial, Helvetica, sans-serif"
+        font-size="54" font-weight="900" fill="#0d1f3c" letter-spacing="3">RETATRUTIDE</text>
+
+  <!-- ── SUBTITLE ── -->
+  <text x="37" y="190" font-family="Arial, Helvetica, sans-serif" font-size="18"
+        fill="#0d1f3c" letter-spacing="1" font-weight="400">Pre-filled Injection Pen</text>
+
+  <!-- ── DOSAGE INFO ── -->
+  <text x="37" y="218" font-family="Arial, Helvetica, sans-serif" font-size="15"
+        fill="#0d1f3c" letter-spacing="0.5">12 mg / 0.6 mL</text>
+  <text x="37" y="238" font-family="Arial, Helvetica, sans-serif" font-size="15"
+        fill="#0d1f3c" letter-spacing="0.5">20 mg/mL</text>
+
+  <!-- ── HOLOGRAPHIC BADGE "12 mg" ── -->
+  <rect x="680" y="90" width="100" height="110" rx="6" fill="url(#holoBadge)"/>
+  <rect x="680" y="90" width="100" height="110" rx="6" fill="none"
+        stroke="#c0d0e0" stroke-width="1.5"/>
+  <!-- Shimmer lines -->
+  <line x1="680" y1="115" x2="780" y2="115" stroke="#ffffff" stroke-width="1" opacity="0.6"/>
+  <line x1="680" y1="125" x2="780" y2="125" stroke="#c8e0f0" stroke-width="0.6" opacity="0.5"/>
+  <line x1="680" y1="160" x2="780" y2="160" stroke="#ffffff" stroke-width="1" opacity="0.6"/>
+  <line x1="680" y1="170" x2="780" y2="170" stroke="#d8f0e8" stroke-width="0.6" opacity="0.5"/>
+  <!-- Number -->
+  <text x="730" y="165" font-family="Arial Black, Arial, sans-serif"
+        font-size="46" font-weight="900" fill="#0d1f3c" text-anchor="middle">12</text>
+  <text x="730" y="188" font-family="Arial, Helvetica, sans-serif"
+        font-size="16" fill="#0d1f3c" text-anchor="middle" font-weight="600">mg</text>
+
+  <!-- ── BOTTOM BAR (navy + holo strip) ── -->
+  <!-- Full navy base -->
+  <rect x="0" y="258" width="800" height="42" fill="#0d1f3c"/>
+
+  <!-- Holo section (right ~35%) -->
+  <rect x="520" y="258" width="280" height="42" fill="url(#holoStrip)" opacity="0.92"/>
+  <!-- Shimmer overlay lines on holo section -->
+  <line x1="520" y1="265" x2="800" y2="265" stroke="#ffffff" stroke-width="0.6" opacity="0.4"/>
+  <line x1="520" y1="272" x2="800" y2="272" stroke="#c8e8f8" stroke-width="0.4" opacity="0.3"/>
+  <line x1="520" y1="280" x2="800" y2="280" stroke="#ffffff" stroke-width="0.6" opacity="0.4"/>
+  <line x1="520" y1="290" x2="800" y2="290" stroke="#d8f0e8" stroke-width="0.4" opacity="0.3"/>
+
+  <!-- Divider -->
+  <line x1="520" y1="258" x2="520" y2="300" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+
+  <!-- Navy bar text -->
+  <text x="20" y="280" font-family="Arial, Helvetica, sans-serif" font-size="13"
+        font-weight="bold" fill="#ffffff" letter-spacing="1">1 PEN</text>
+  <line x1="72" y1="265" x2="72" y2="293" stroke="#ffffff" stroke-width="1" opacity="0.4"/>
+  <text x="82" y="276" font-family="Arial, Helvetica, sans-serif" font-size="11"
+        fill="#ffffff" letter-spacing="0.5">For Subcutaneous Use Only</text>
+  <text x="82" y="292" font-family="Arial, Helvetica, sans-serif" font-size="11"
+        fill="#c0d8f0" letter-spacing="0.5">Rx Only</text>
+
+  <!-- Holo bar text -->
+  <text x="660" y="276" font-family="Arial, Helvetica, sans-serif" font-size="10"
+        fill="#0d1f3c" text-anchor="middle" font-weight="bold" letter-spacing="2">ADVANCED PEPTIDE THERAPY</text>
+  <text x="660" y="292" font-family="Arial, Helvetica, sans-serif" font-size="10"
+        fill="#0d1f3c" text-anchor="middle" letter-spacing="2">ENGINEERED FOR PRECISION</text>
+
+  <!-- ═══════════════════════════════════════════════════
+       SIDE PANEL  (800,0) → (1020,300)   ← 220px = ~37mm
+  ═══════════════════════════════════════════════════ -->
+  <rect x="800" y="0" width="220" height="300" fill="url(#sidePanel)"/>
+  <rect x="800" y="0" width="220" height="300" fill="none" stroke="#0d1f3c" stroke-width="3"/>
+  <!-- Left edge divider line -->
+  <line x1="803" y1="0" x2="803" y2="300" stroke="#1e3a6a" stroke-width="1.5"/>
+
+  <!-- LOT / MFG / EXP -->
+  <text x="910" y="30" font-family="Arial, Helvetica, sans-serif" font-size="10"
+        fill="#a8c4e0" text-anchor="middle" letter-spacing="2" font-weight="bold">BATCH INFORMATION</text>
+  <line x1="818" y1="36" x2="1002" y2="36" stroke="#2a4a7a" stroke-width="0.8"/>
+
+  <text x="818" y="54" font-family="Arial, Helvetica, sans-serif" font-size="10.5"
+        fill="#a8c4e0" font-weight="bold">LOT</text>
+  <text x="818" y="68" font-family="Arial, Helvetica, sans-serif" font-size="10.5"
+        fill="#ffffff">RTT240501</text>
+
+  <text x="818" y="88" font-family="Arial, Helvetica, sans-serif" font-size="10.5"
+        fill="#a8c4e0" font-weight="bold">MFG</text>
+  <text x="818" y="102" font-family="Arial, Helvetica, sans-serif" font-size="10.5"
+        fill="#ffffff">05 MAY 2024</text>
+
+  <text x="818" y="122" font-family="Arial, Helvetica, sans-serif" font-size="10.5"
+        fill="#a8c4e0" font-weight="bold">EXP</text>
+  <text x="818" y="136" font-family="Arial, Helvetica, sans-serif" font-size="10.5"
+        fill="#ffffff">05 MAY 2026</text>
+
+  <line x1="818" y1="144" x2="1002" y2="144" stroke="#2a4a7a" stroke-width="0.8"/>
+
+  <!-- QR Code placeholder -->
+  <rect x="860" y="152" width="60" height="60" rx="4" fill="#ffffff"/>
+  <rect x="864" y="156" width="52" height="52" rx="2" fill="#ffffff"/>
+  <!-- QR pattern -->
+  <rect x="865" y="157" width="16" height="16" rx="1" fill="#0d1f3c"/>
+  <rect x="899" y="157" width="16" height="16" rx="1" fill="#0d1f3c"/>
+  <rect x="865" y="191" width="16" height="16" rx="1" fill="#0d1f3c"/>
+  <rect x="883" y="163" width="5"  height="5"  fill="#0d1f3c"/>
+  <rect x="891" y="171" width="5"  height="5"  fill="#0d1f3c"/>
+  <rect x="883" y="179" width="5"  height="5"  fill="#0d1f3c"/>
+  <rect x="899" y="183" width="5"  height="5"  fill="#0d1f3c"/>
+  <rect x="891" y="191" width="5"  height="5"  fill="#0d1f3c"/>
+  <rect x="905" y="175" width="5"  height="5"  fill="#0d1f3c"/>
+
+  <text x="910" y="225" font-family="Arial, Helvetica, sans-serif" font-size="8"
+        fill="#a8c4e0" text-anchor="middle" letter-spacing="1">AUTHENTICATE PRODUCT</text>
+  <text x="910" y="236" font-family="Arial, Helvetica, sans-serif" font-size="8"
+        fill="#a8c4e0" text-anchor="middle" letter-spacing="1">SCAN QR CODE</text>
+
+  <line x1="818" y1="244" x2="1002" y2="244" stroke="#2a4a7a" stroke-width="0.8"/>
+
+  <!-- Storage info -->
+  <!-- Thermometer icon (simple) -->
+  <rect x="820" y="252" width="8" height="22" rx="4" fill="none" stroke="#a8c4e0" stroke-width="1.2"/>
+  <circle cx="824" cy="276" r="5" fill="none" stroke="#a8c4e0" stroke-width="1.2"/>
+  <rect x="822" y="258" width="4" height="16" rx="2" fill="#4a9eff" opacity="0.7"/>
+  <circle cx="824" cy="276" r="3.5" fill="#4a9eff" opacity="0.7"/>
+
+  <text x="834" y="261" font-family="Arial, Helvetica, sans-serif" font-size="9"
+        fill="#a8c4e0" font-weight="bold">STORE REFRIGERATED</text>
+  <text x="834" y="272" font-family="Arial, Helvetica, sans-serif" font-size="9"
+        fill="#ffffff">2°C – 8°C</text>
+  <text x="834" y="284" font-family="Arial, Helvetica, sans-serif" font-size="8.5"
+        fill="#7090b0">DO NOT FREEZE</text>
+
+</svg>
